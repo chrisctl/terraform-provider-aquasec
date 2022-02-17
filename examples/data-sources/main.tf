@@ -85,3 +85,11 @@ data "aquasec_image_assurance_policy" "default" {
 output "images" {
   value = data.aquasec_image_assurance_policy.default
 }
+
+data "aquasec_gateways" "testgateways" {
+  gateway_name = "aqua-gateway-66458f488c-2728c_gateway"
+}
+
+output "gateways" {
+  value = data.aquasec_gateways.testgateways
+}
